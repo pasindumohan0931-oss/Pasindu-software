@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pasindu Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#3b82f6',
+                            glow: '#60a5fa',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-nav {
+                @apply backdrop-blur-md bg-brand-dark/80 border-b border-white/10;
+            }
+             .glass-card {
+                @apply backdrop-blur-sm bg-white/5 border border-white/10 hover:border-brand-accent/50 transition-all duration-300;
+            }
+            .text-gradient {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600;
+            }
+        }
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-xl font-bold text-white">P</span>
+                        </div>
+                        <span class="text-2xl font-bold text-white tracking-wide">Pasindu<span
+                                class="text-blue-400">Soft</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="products.html"
+                            class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Software</a>
+                        <a href="about.html"
+                            class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 border-blue-500">About
+                            Us</a>
+                        <a href="contact.html"
+                            class="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition-all hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">Contact</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                        id="mobile-menu-btn">
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden glass-nav border-t border-white/10" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="products.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Software</a>
+                <a href="about.html"
+                    class="text-white bg-white/10 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="contact.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-20 px-4 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-600/5 rotate-12 transform scale-150 rounded-[4rem] z-0 blur-3xl"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Innovating for the <span
+                    class="text-gradient">Future</span></h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                We are a team of passionate developers, designers, and visionaries dedicated to building software that
+                changes the way you work.
+            </p>
+        </div>
+    </header>
+
+    <!-- Story Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="glass-card rounded-2xl p-8 relative overflow-hidden group">
+                    <div
+                        class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500/20 rounded-full blur-2xl group-hover:bg-blue-500/30 transition-colors">
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-6 relative z-10">Our Story</h2>
+                    <p class="text-gray-400 mb-4 leading-relaxed relative z-10">
+                        Founded with a simple mission in mind: to make powerful software accessible to everyone. What
+                        started as a small project in a university dorm has now grown into a global software powerhouse.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed relative z-10">
+                        At Pasindu Software, we believe that technology should be intuitive, not complicated. That's why
+                        we spend countless hours refining our user interfaces and optimizing our code.
+                    </p>
+                </div>
+                <div class="flex justify-center relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 blur-3xl opacity-20 animate-pulse">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="bg-white/10 backdrop-blur-md p-6 rounded-2xl flex flex-col items-center justify-center h-40 w-40">
+                            <span class="text-4xl font-bold text-white">5+</span>
+                            <span class="text-sm text-gray-400">Years</span>
+                        </div>
+                        <div
+                            class="bg-white/10 backdrop-blur-md p-6 rounded-2xl flex flex-col items-center justify-center h-40 w-40 mt-8">
+                            <span class="text-4xl font-bold text-white">20+</span>
+                            <span class="text-sm text-gray-400">Products</span>
+                        </div>
+                        <div
+                            class="bg-white/10 backdrop-blur-md p-6 rounded-2xl flex flex-col items-center justify-center h-40 w-40">
+                            <span class="text-4xl font-bold text-white">100+</span>
+                            <span class="text-sm text-gray-400">Experts</span>
+                        </div>
+                        <div
+                            class="bg-white/10 backdrop-blur-md p-6 rounded-2xl flex flex-col items-center justify-center h-40 w-40 mt-8">
+                            <span class="text-4xl font-bold text-white">2M+</span>
+                            <span class="text-sm text-gray-400">Lines of Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-brand-light/20 relative">
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-brand-dark via-transparent to-brand-dark opacity-80 pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Meet the Team</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="text-center group">
+                    <div
+                        class="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-gray-700 to-gray-600 p-1 group-hover:scale-105 transition-transform duration-300">
+                        <div class="w-full h-full rounded-full bg-cover bg-center overflow-hidden"
+                            style="background-image: url('https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Pasindu Mohan</h3>
+                    <p class="text-blue-400 text-sm">Founder & CEO</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="text-center group">
+                    <div
+                        class="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-gray-700 to-gray-600 p-1 group-hover:scale-105 transition-transform duration-300">
+                        <div class="w-full h-full rounded-full bg-cover bg-center overflow-hidden"
+                            style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80');">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Sarah Jenkins</h3>
+                    <p class="text-purple-400 text-sm">Lead Developer</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="text-center group">
+                    <div
+                        class="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-gray-700 to-gray-600 p-1 group-hover:scale-105 transition-transform duration-300">
+                        <div class="w-full h-full rounded-full bg-cover bg-center overflow-hidden"
+                            style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80');">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Michael Chang</h3>
+                    <p class="text-pink-400 text-sm">Product Designer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark/90 border-t border-white/10 pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Pasindu Software. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
